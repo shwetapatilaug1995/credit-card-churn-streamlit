@@ -10,7 +10,7 @@ The objective of this project is to build and compare multiple machine learning 
 
 \## Dataset Description
 
-The dataset is sourced from Kaggle and contains 10,127 records with customer demographic and transaction-related features. 
+The dataset is sourced from Kaggle and contains 10,127 records with customer demographic and transaction-related features.
 
 
 
@@ -34,7 +34,7 @@ Binary classification (Existing vs Attrited)
 
 
 
-Minimum features satisfied 
+Minimum features satisfied
 
 
 
@@ -50,21 +50,21 @@ Logistic Regression, Decision Tree, KNN, Naive Bayes, Random Forest, XGBoost.
 
 
 
-| ML Model                  | Accuracy | AUC    | Precision | Recall | F1 Score | MCC    |
+| ML Model Name             | Accuracy | AUC    | Precision | Recall | F1     | MCC    |
 
-| ------------------------- | -------- | ------ | --------- | ------ | -------- | ------ |
+| ------------------------- | -------- | ------ | --------- | ------ | ------ | ------ |
 
-| Logistic Regression       | 1.0000   | 1.0000 | 1.0000    | 1.0000 | 1.0000   | 1.0000 |
+| Logistic Regression       | 1.0000   | 1.0000 | 1.0000    | 1.0000 | 1.0000 | 1.0000 |
 
-| Decision Tree             | 1.0000   | 1.0000 | 1.0000    | 1.0000 | 1.0000   | 1.0000 |
+| Decision Tree             | 1.0000   | 1.0000 | 1.0000    | 1.0000 | 1.0000 | 1.0000 |
 
-| K-Nearest Neighbors (KNN) | 0.9980   | 0.9999 | 1.0000    | 0.9877 | 0.9938   | 0.9927 |
+| k-Nearest Neighbors (kNN) | 0.9980   | 0.9999 | 1.0000    | 0.9877 | 0.9938 | 0.9927 |
 
-| Naive Bayes               | 1.0000   | 1.0000 | 1.0000    | 1.0000 | 1.0000   | 1.0000 |
+| Naive Bayes               | 1.0000   | 1.0000 | 1.0000    | 1.0000 | 1.0000 | 1.0000 |
 
-| Random Forest (Ensemble)  | 1.0000   | 1.0000 | 1.0000    | 1.0000 | 1.0000   | 1.0000 |
+| Random Forest (Ensemble)  | 1.0000   | 1.0000 | 1.0000    | 1.0000 | 1.0000 | 1.0000 |
 
-| XGBoost (Ensemble)        | 0.9990   | 1.0000 | 1.0000    | 0.9938 | 0.9969   | 0.9963 |
+| XGBoost (Ensemble)        | 0.9990   | 1.0000 | 1.0000    | 0.9938 | 0.9969 | 0.9963 |
 
 
 
@@ -72,17 +72,21 @@ Logistic Regression, Decision Tree, KNN, Naive Bayes, Random Forest, XGBoost.
 
 \##Model Performance Observations
 
-| ML Model                  | Observation about model performance                                                                                                                                                             | Logistic Regression       | Achieved perfect performance across all metrics, indicating the dataset is highly linearly separable after preprocessing. The model is simple, interpretable, and performed exceptionally well. |
+| ML Model Name             | Observation about model performance                                                                                                                                                                        |
 
-| Decision Tree             | Also achieved perfect scores, suggesting that the tree was able to capture all decision boundaries. However, such perfect performance may indicate potential overfitting.                       |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| K-Nearest Neighbors (KNN) | Delivered very high performance with slightly lower recall, showing sensitivity to neighborhood structure and dependence on feature scaling.                                                    |
+| Logistic Regression       | Achieved perfect performance on the test dataset, indicating strong linear separability of the features. However, such perfect scores may also indicate possible data simplicity or potential overfitting. |
 
-| Naive Bayes               | Achieved perfect metrics, indicating strong conditional independence among features for this dataset. Performs well despite its simplicity.                                                     |
+| Decision Tree             | Delivered perfect classification results but is prone to overfitting, especially when depth is unrestricted, which may affect generalization on unseen data.                                               |
 
-| Random Forest (Ensemble)  | Delivered perfect performance, demonstrating the strength of ensemble learning in reducing variance and improving generalization.                                                               |
+| k-Nearest Neighbors (kNN) | Performed very well with high accuracy and MCC, though slightly lower recall indicates sensitivity to class boundaries and dependence on distance-based feature scaling.                                   |
 
-| XGBoost (Ensemble)        | Achieved near-perfect performance with marginally lower recall. This confirms XGBoost’s robustness and effectiveness in handling complex patterns.                                              |
+| Naive Bayes               | Achieved perfect metrics, showing strong conditional independence among features for this dataset; however, this assumption may not always hold in real-world data.                                        |
 
+| Random Forest (Ensemble)  | Demonstrated excellent and stable performance by aggregating multiple decision trees, reducing overfitting and improving robustness.                                                                       |
 
+| XGBoost (Ensemble)        | Provided near-perfect results with strong generalization due to gradient boosting, making it the most reliable and scalable model for this problem.                                                        |
+
+&nbsp;                                           |
 
