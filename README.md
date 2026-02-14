@@ -85,19 +85,15 @@ The following machine learning models were trained and evaluated:
 
 ## Performance Observations
 
+| ML Model Name | Observation about Model Performance |
+|---------------|-------------------------------------|
+| Logistic Regression | Logistic Regression provided a reasonable baseline performance. However, it showed lower recall compared to tree-based models, indicating difficulty in capturing complex nonlinear relationships present in the data. |
+| Decision Tree | The Decision Tree model achieved good recall and balanced performance, but its generalization capability was slightly lower compared to ensemble methods, which may indicate mild overfitting. |
+| KNN | The K-Nearest Neighbors (KNN) model showed relatively low recall despite moderate accuracy. This suggests sensitivity to feature scaling and class imbalance, which affected its ability to correctly identify churn cases. |
+| Naive Bayes | Naive Bayes demonstrated moderate performance across evaluation metrics. Its assumptions of feature independence may have limited its effectiveness for this dataset. |
+| Random Forest (Ensemble) | Random Forest performed very well with high accuracy and strong predictive capability. The ensemble approach helped improve robustness and reduced overfitting compared to single decision trees. |
+| XGBoost (Ensemble) | XGBoost achieved the best overall performance with the highest accuracy, AUC, and MCC scores. This indicates strong learning capability and excellent generalization due to gradient boosting optimization. |
 
-
-- **XGBoost** achieved the best overall performance with the highest accuracy, AUC, and MCC, indicating strong predictive capability and generalization.
-
-- **Random Forest** also performed very well, demonstrating robustness due to ensemble learning.
-
-- **Decision Tree** showed good recall but slightly lower generalization compared to ensemble methods.
-
-- **Logistic Regression** provided a reasonable baseline but struggled with recall, indicating difficulty capturing complex nonlinear patterns.
-
-- **KNN** had low recall, suggesting sensitivity to class imbalance and feature scaling.
-
-- **Naive Bayes** showed moderate performance but was limited by independence assumptions among features.
 
 
 
