@@ -1,8 +1,8 @@
-\# Credit Card Customer Churn Prediction
+# Credit Card Customer Churn Prediction
 
 
 
-\## Problem Statement
+## Problem Statement
 
 
 
@@ -14,7 +14,7 @@ The objective of this project is to build and compare multiple machine learning 
 
 
 
-\## Dataset Description
+## Dataset Description
 
 
 
@@ -22,15 +22,15 @@ The dataset is sourced from Kaggle and contains 10,127 records and 23 attributes
 
 
 
-\* Dataset Name: Credit Card Customers Dataset
+* Dataset Name: Credit Card Customers Dataset
 
-\* Source: Kaggle
+* Source: Kaggle
 
-\* Total Records: ~10,000
+* Total Records: ~10,000
 
-\* Target Column: Attrition\_Flag
+* Target Column: Attrition\_Flag
 
-\* Problem Type: Binary Classification (Existing vs Attrited Customers)
+* Problem Type: Binary Classification (Existing vs Attrited Customers)
 
 
 
@@ -38,7 +38,7 @@ The dataset is sourced from Kaggle and contains 10,127 records and 23 attributes
 
 
 
-\## Models Implemented
+## Models Implemented
 
 
 
@@ -46,17 +46,17 @@ The following machine learning models were trained and evaluated:
 
 
 
-\* Logistic Regression
+* Logistic Regression
 
-\* Decision Tree
+* Decision Tree
 
-\* K-Nearest Neighbors (KNN)
+* K-Nearest Neighbors (KNN)
 
-\* Naive Bayes
+* Naive Bayes
 
-\* Random Forest
+* Random Forest
 
-\* XGBoost
+* XGBoost
 
 
 
@@ -83,21 +83,22 @@ The following machine learning models were trained and evaluated:
 
 
 
-\## Performance Observations
+## Performance Observations
 
 
 
-\* \*\*XGBoost\*\* achieved the best overall performance with the highest accuracy, AUC, and MCC, indicating strong predictive capability and generalization.
+- **XGBoost** achieved the best overall performance with the highest accuracy, AUC, and MCC, indicating strong predictive capability and generalization.
 
-\* \*\*Random Forest\*\* also performed very well, demonstrating robustness due to ensemble learning.
+- **Random Forest** also performed very well, demonstrating robustness due to ensemble learning.
 
-\* \*\*Decision Tree\*\* showed good recall but slightly lower generalization compared to ensemble methods.
+- **Decision Tree** showed good recall but slightly lower generalization compared to ensemble methods.
 
-\* \*\*Logistic Regression\*\* provided a reasonable baseline but struggled with recall, indicating difficulty capturing complex nonlinear patterns.
+- **Logistic Regression** provided a reasonable baseline but struggled with recall, indicating difficulty capturing complex nonlinear patterns.
 
-\* \*\*KNN\*\* had low recall, suggesting sensitivity to class imbalance and feature scaling.
+- **KNN** had low recall, suggesting sensitivity to class imbalance and feature scaling.
 
-\* \*\*Naive Bayes\*\* showed moderate performance but was limited by independence assumptions among features.
+- **Naive Bayes** showed moderate performance but was limited by independence assumptions among features.
+
 
 
 
@@ -105,7 +106,7 @@ The following machine learning models were trained and evaluated:
 
 
 
-\## Project Structure
+## Project Structure
 
 
 
@@ -141,7 +142,7 @@ ML Assignment 2
 
 
 
-\## Conclusion
+## Conclusion
 
 
 
@@ -153,7 +154,7 @@ This project demonstrates the application of multiple machine learning algorithm
 
 
 
-\## Author
+## Author
 
 
 
