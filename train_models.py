@@ -21,6 +21,14 @@ df[target] = df[target].map({
 df = df.drop([
     "CLIENTNUM"
 ], axis=1)
+
+#this columns will cause overfitting 
+df = df.drop([
+    'Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1',
+    'Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2'
+], axis=1)
+
+
 #categorical columns handling
 cat_cols = df.select_dtypes(include="object").columns
 df = pd.get_dummies(df, columns=cat_cols, drop_first=True)

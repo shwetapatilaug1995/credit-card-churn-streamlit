@@ -4,89 +4,167 @@
 
 \## Problem Statement
 
+
+
 The objective of this project is to build and compare multiple machine learning classification models to predict customer attrition in a credit card business. The goal is to identify customers who are likely to leave the service, enabling proactive retention strategies.
+
+
+
+---
 
 
 
 \## Dataset Description
 
-The dataset is sourced from Kaggle and contains 10,127 records with customer demographic and transaction-related features.
+
+
+The dataset is sourced from Kaggle and contains 10,127 records and 23 attributes with customer demographic and transaction-related features.
 
 
 
-Dataset name: Credit Card Customers Dataset
+\* Dataset Name: Credit Card Customers Dataset
+
+\* Source: Kaggle
+
+\* Total Records: ~10,000
+
+\* Target Column: Attrition\_Flag
+
+\* Problem Type: Binary Classification (Existing vs Attrited Customers)
 
 
 
-Source: Kaggle
+---
 
 
 
-Total records (~10,000)
+\## Models Implemented
 
 
 
-Target column: Attrition\_Flag
+The following machine learning models were trained and evaluated:
 
 
 
-Binary classification (Existing vs Attrited)
+\* Logistic Regression
+
+\* Decision Tree
+
+\* K-Nearest Neighbors (KNN)
+
+\* Naive Bayes
+
+\* Random Forest
+
+\* XGBoost
 
 
 
-Minimum features satisfied
+---
 
 
 
+\## Model Performance Comparison
 
 
 
+| Model               | Accuracy | AUC    | Precision | Recall | F1 Score | MCC    |
 
-\## Models Used
+| ------------------- | -------- | ------ | --------- | ------ | -------- | ------ |
 
-Logistic Regression, Decision Tree, KNN, Naive Bayes, Random Forest, XGBoost.
+| Logistic Regression | 0.8998   | 0.9166 | 0.7675    | 0.5385 | 0.6329   | 0.5891 |
 
+| Decision Tree       | 0.9334   | 0.8707 | 0.8006    | 0.7785 | 0.7894   | 0.7499 |
 
+| KNN                 | 0.8712   | 0.8003 | 0.7623    | 0.2862 | 0.4161   | 0.4151 |
 
+| Naive Bayes         | 0.8702   | 0.8378 | 0.6006    | 0.5692 | 0.5845   | 0.5079 |
 
+| Random Forest       | 0.9551   | 0.9841 | 0.9366    | 0.7723 | 0.8465   | 0.8258 |
 
-| ML Model Name             | Accuracy | AUC    | Precision | Recall | F1     | MCC    |
-
-| ------------------------- | -------- | ------ | --------- | ------ | ------ | ------ |
-
-| Logistic Regression       | 1.0000   | 1.0000 | 1.0000    | 1.0000 | 1.0000 | 1.0000 |
-
-| Decision Tree             | 1.0000   | 1.0000 | 1.0000    | 1.0000 | 1.0000 | 1.0000 |
-
-| k-Nearest Neighbors (kNN) | 0.9980   | 0.9999 | 1.0000    | 0.9877 | 0.9938 | 0.9927 |
-
-| Naive Bayes               | 1.0000   | 1.0000 | 1.0000    | 1.0000 | 1.0000 | 1.0000 |
-
-| Random Forest (Ensemble)  | 1.0000   | 1.0000 | 1.0000    | 1.0000 | 1.0000 | 1.0000 |
-
-| XGBoost (Ensemble)        | 0.9990   | 1.0000 | 1.0000    | 0.9938 | 0.9969 | 0.9963 |
+| XGBoost             | 0.9664   | 0.9920 | 0.9269    | 0.8585 | 0.8914   | 0.8725 |
 
 
 
+---
 
 
-\##Model Performance Observations
 
-| ML Model Name             | Observation about model performance                                                                                                                                                                        |
+\## Performance Observations
 
-| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| Logistic Regression       | Achieved perfect performance on the test dataset, indicating strong linear separability of the features. However, such perfect scores may also indicate possible data simplicity or potential overfitting. |
 
-| Decision Tree             | Delivered perfect classification results but is prone to overfitting, especially when depth is unrestricted, which may affect generalization on unseen data.                                               |
+\* \*\*XGBoost\*\* achieved the best overall performance with the highest accuracy, AUC, and MCC, indicating strong predictive capability and generalization.
 
-| k-Nearest Neighbors (kNN) | Performed very well with high accuracy and MCC, though slightly lower recall indicates sensitivity to class boundaries and dependence on distance-based feature scaling.                                   |
+\* \*\*Random Forest\*\* also performed very well, demonstrating robustness due to ensemble learning.
 
-| Naive Bayes               | Achieved perfect metrics, showing strong conditional independence among features for this dataset; however, this assumption may not always hold in real-world data.                                        |
+\* \*\*Decision Tree\*\* showed good recall but slightly lower generalization compared to ensemble methods.
 
-| Random Forest (Ensemble)  | Demonstrated excellent and stable performance by aggregating multiple decision trees, reducing overfitting and improving robustness.                                                                       |
+\* \*\*Logistic Regression\*\* provided a reasonable baseline but struggled with recall, indicating difficulty capturing complex nonlinear patterns.
 
-| XGBoost (Ensemble)        | Provided near-perfect results with strong generalization due to gradient boosting, making it the most reliable and scalable model for this problem.                                                        |
+\* \*\*KNN\*\* had low recall, suggesting sensitivity to class imbalance and feature scaling.
 
-&nbsp;                                           |
+\* \*\*Naive Bayes\*\* showed moderate performance but was limited by independence assumptions among features.
+
+
+
+---
+
+
+
+\## Project Structure
+
+
+
+```
+
+ML Assignment 2
+
+│── model/
+
+│   ├── model.pkl
+
+│   ├── scaler.pkl
+
+│   └── features.pkl
+
+│
+
+│── train\_models.py
+
+│── app.py
+
+│── BankChurners.csv
+
+│── requirements.txt
+
+│── README.md
+
+```
+
+
+
+---
+
+
+
+\## Conclusion
+
+
+
+This project demonstrates the application of multiple machine learning algorithms for customer churn prediction. Ensemble methods, particularly XGBoost and Random Forest, provided the most reliable results and can be effectively used for real-world churn prediction systems.
+
+
+
+---
+
+
+
+\## Author
+
+
+
+Shweta Patil
+
+2024DC04177
 
